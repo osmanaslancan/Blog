@@ -32,6 +32,10 @@ footer {
     transform: translate(-50%);
 }
 
+footer a {
+    color: rgb(255, 255, 255, 0.7);
+}
+
 .header-link {
     background-color: var(--default-background);
     padding: 5px;
@@ -98,6 +102,7 @@ header {
 
 body {
     margin: 0px;
+    position: relative;
 }
 
 .content {
