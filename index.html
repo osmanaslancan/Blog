@@ -7,6 +7,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="assets/styles/style.css" />
 
+  <script>
+    function scrollToContent() {
+      document.getElementsByClassName('bottom-content')[0].scrollIntoView({
+        behavior: "smooth",
+        block: 'end'
+      });
+      return false;
+    }
+  </script>
+
 </head>
 
 <body>
@@ -19,7 +29,11 @@
         </div>
       </a>
       <div class="spacer"></div>
-
+      <a href="javascript:;" onclick="scrollToContent()">
+        <div class="header-link header-blog">
+          <p>Experiences</p>
+        </div>
+      </a>
       <a href="" target="_blank">
         <div class="header-link header-blog">
           <p>Blog</p>
@@ -47,9 +61,6 @@
       </div>
     </div>
   </div>
-  <!-- <footer>
-    <a href="https://www.flaticon.com" title="flaticon">Icons provided by Flaticon</a>
-  </footer> -->
   <div class="bottom-content">
     <div class="bottom-about">
       <h1>About</h1>
