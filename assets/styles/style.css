@@ -1,15 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
 :root {
     --default-background: rgb(44, 44, 44, 0.5);
     --link-color-hover: rgb(44, 44, 44, 0.8);
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
     font-size: 16px;
     color: #ffffff;
     line-height: 1.5;
     background-image: url(../images/background.jpg);
     background-size: cover;
+    font-family: 'Inter', sans-serif;
 }
 
 a {
@@ -70,6 +72,21 @@ a {
     text-decoration: none;
 }
 
+@media (max-width: 768px) {
+    .card-container{
+        flex-direction: column;
+        margin-bottom: 35px;
+    }
+    div.card {
+        height: 75vw;
+        width: 75vw;
+    }
+    .profile-image > p {
+        display: none;
+    }
+}
+
+
 header {
     display: flex;
     gap: 10px;
@@ -84,6 +101,20 @@ header {
 .header-social-logo {
     height: 30px;
     width: 30px;
+}
+
+header > .right {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.right {
+    margin-left: auto;
+}
+
+p {
+    font-size: 1.2rem;
 }
 
 .header-blog p {
