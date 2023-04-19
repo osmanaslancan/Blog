@@ -14,7 +14,16 @@ body {
     font-family: 'Inter', sans-serif;
 }
 
-a {
+.top-bar a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.top-bar p {
+    margin-top: auto;
+}
+
+.content h1, .content h2 {
     color: #ffffff;
 }
 
@@ -86,8 +95,15 @@ a {
     }
 }
 
+.navbar a {
+    color: #ffffff;
+}
 
-header {
+.navbar p {
+    margin-top: auto;
+}
+
+.top-bar {
     display: flex;
     gap: 10px;
     padding: 10px;
@@ -172,7 +188,7 @@ body {
     align-items: center;
     width: 100%;
 }
-.card {
+.bottom-content .card {
     height: 400px;
     width: 400px;
     border-radius: 50px;
@@ -182,6 +198,7 @@ body {
     align-items: center;
     justify-content: space-evenly;
     text-align: center;
+    color: #ffffff;
 }
 
 .card a {
