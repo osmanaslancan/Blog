@@ -204,3 +204,11 @@ body {
 .card a {
  color: rgb(180, 145, 213);
 }
+
+.nav-item a:hover {
+    color: cyan;
+}
+
+a.navbar-brand:hover {
+    color: cyan;
+}
