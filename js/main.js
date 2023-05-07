@@ -338,16 +338,12 @@ $(function() {
 				"Subject": subject,
 				"Message": message
 			}),
-			dataType: "json",
 			contentType: "application/json; charset=utf-8",
 			success: function(data) {
 				alert("Message sent successfully!");
 			},
-			error: function(errMsg) {
-				if (errMsg.status == 200)
-					alert("Message sent successfully!");
-				else
-					alert("Message sending failed!");
+			error: function(xhr, status, error) {
+				alert("Message sending failed!");
 			}
 		});
 
