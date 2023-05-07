@@ -317,3 +317,34 @@ $(function() {
 
 });
 
+
+
+$(function() {
+
+	$("#send-mail").on("click", function(e) {
+		e.preventDefault();
+		// get fields
+		var name = $("#mail-name").val();
+		var email = $("#mail-email").val();
+		var subject = $("#mail-subject").val();
+		var message = $("#mail-message").val();
+		// send post request to https://portfoliomailsender.azurewebsites.net/api/SendMail
+		$.ajax({
+			type: "POST",
+			url: "https://portfoliomailsender.azurewebsites.net/api/SendMail",
+			data: JSON.stringify({
+				"Name": name,
+				"Email": email,
+				"Subject": subject,
+				"Message": message
+			}),
+			contentType: "application/json; charset=utf-8",
+			dataType: "json",
+			success: function(data) {
+			}
+		});
+	});
+  
+  });
+  
+  
