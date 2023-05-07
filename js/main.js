@@ -331,20 +331,23 @@ $(function() {
 		// send post request to https://portfoliomailsender.azurewebsites.net/api/SendMail
 		$.ajax({
 			type: "POST",
-			url: "https://portfoliomailsender.azurewebsites.net/api/SendMail",
+			url: "https://portfoliomailsender.azurewebsites.net/api/SendMail?code=8muh5e3nOW27RT8CahQIvQirU2mn7yl9lV1Q1s5hGGXzAzFuG0K7Wg==",
 			data: JSON.stringify({
 				"Name": name,
 				"Email": email,
 				"Subject": subject,
 				"Message": message
 			}),
-			contentType: "application/json; charset=utf-8",
 			dataType: "json",
+			contentType: "application/json; charset=utf-8",
 			success: function(data) {
 				alert("Message sent successfully!");
 			},
 			error: function(errMsg) {
-				alert("Message sending failed!");
+				if (errMsg.status == 200)
+					alert("Message sent successfully!");
+				else
+					alert("Message sending failed!");
 			}
 		});
 
