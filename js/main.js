@@ -341,8 +341,13 @@ $(function() {
 			contentType: "application/json; charset=utf-8",
 			dataType: "json",
 			success: function(data) {
+				alert("Message sent successfully!");
+			},
+			error: function(errMsg) {
+				alert("Message sending failed!");
 			}
 		});
+
 	});
   
   });
